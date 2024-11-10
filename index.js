@@ -47,3 +47,13 @@ resource "aws_instance" "terraform_instance" {
   ami           = "<AMI KEY>"
   instance_type = "t2.micro"
 }
+
+
+// Terraform S3 Bucket
+provider "aws" {
+access_key = "<YOUR IAM USER ACCESS KEY>"
+secret_key = "<YOUR IAM USER ACCESS SECRET KEY>"
+region  = "ap-south-1"
+}
+
+resource "aws_s3_bucket" "my_bucket" {}
